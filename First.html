@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="First.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- <div class="container-fluid">
+        <div class="main ">
+           
+        
+            <video height="" width="1000px" autoplay loop controls>
+                <SOurce src="IFZA.mp4"></SOurce>
+                </video>
+            
+        </div>
+        </div>
+           
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+
+                        <img src="data:image/png;base64,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"
+                            alt="" height="60px" width="200px">
+
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        IFZA Partners
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Become a Partner</a></li>
+                                        <li><a class="dropdown-item" href="#">Partner Portal</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Business Setup
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Business Setup in Dubai</a></li>
+                                        <li><a class="dropdown-item" href="#">Commercial Licence</a></li>
+                                        <li><a class="dropdown-item" href="#">Professional License</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        IFZA Ecosystem
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">IFZA Academy</a></li>
+                                        <li><a class="dropdown-item" href="#">IFZA Banking Services</a></li>
+                                        <li><a class="dropdown-item" href="#">IFZA Cares</a></li>
+                                        <li><a class="dropdown-item" href="#">IFZA Corporate Consulting</a></li>
+                                        <li><a class="dropdown-item" href="#">IFZA Elite</a></li>
+                                        <li><a class="dropdown-item" href="#">IFZA Events</a></li>
+                                        <li><a class="dropdown-item" href="#">IFZA Life</a></li>
+                                        <li><a class="dropdown-item" href="#">IFZA Offshore</a></li>
+                                        <li><a class="dropdown-item" href="#">IFZA Property</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                       About Us
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Leadership</a></li>
+                                        <li><a class="dropdown-item" href="#">Why Dubai</a></li>
+                                        <li><a class="dropdown-item" href="#">Careers</a></li>
+                                       
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Business Insights
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Blog & News</a></li>
+                                        <li><a class="dropdown-item" href="#">Industry Analysis</a></li>
+                                        <li><a class="dropdown-item" href="#">Guides</a></li>
+                                        <li><a class="dropdown-item" href="#">Videos</a></li>
+                                       
+                                       
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Contact Us
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Blog & News</a></li>
+                                        <li><a class="dropdown-item" href="#">Industry Analysis</a></li>
+                                        <li><a class="dropdown-item" href="#">Guides</a></li>
+                                        <li><a class="dropdown-item" href="#">Videos</a></li>
+                                       
+                                       
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      EN
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Cn</a></li>
+                                        <li><a class="dropdown-item" href="#">De</a></li>
+                                        <li><a class="dropdown-item" href="#">It</a></li>
+                                        <li><a class="dropdown-item" href="#">Fr</a></li>
+                                        <li><a class="dropdown-item" href="#">Ru</a></li>
+                                        <li><a class="dropdown-item" href="#">Hi</a></li>
+                                        <li><a class="dropdown-item" href="#">Es</a></li>
+                                        <li><a class="dropdown-item" href="#">Pt</a></li>
+                                        <li><a class="dropdown-item" href="#">Tr</a></li>
+                                       
+                                       
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+          
+           
+             
+            
+        
+        </div>
+
+
+    </div> -->
+    <video class="video-background" autoplay loop muted>
+        <source src="IFZA.mp4" type="video/mp4">
+    </video>
+
+    <div class="container-fluid">
+        <div class="main">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg  fixed-top">
+                    <div class="container-fluid">
+                        <!-- <img src="data:image/png;base64,..." alt="" height="60px" width="200px"> -->
+                         <h1>IFZA</h1>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        IFZA Partners
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Become a Partner</a></li>
+                                        <li><a class="dropdown-item" href="#">Partner Portal</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Business Setup
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Business Setup in Dubai</a></li>
+                                        <li><a class="dropdown-item" href="#">Commercial Licence</a></li>
+                                        <li><a class="dropdown-item" href="#">Professional License</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Add other navbar items here -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

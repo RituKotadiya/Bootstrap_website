@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+/* 
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+    padding-top: 70px; 
+}
+
+.main{
+    background: transparent;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #555;
+    color: white;
+} */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Add a margin to the body so content isn't hidden behind the fixed navbar */
+body {
+    margin-top: 100px; /* Adjust based on the navbar height */
+}
+
+
+/* Optional: Change navbar background when scrolled */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background when scrolled */
+}
+
+/* Style the video background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place the video behind the content */
+}
+
+
+
+
+.navbar-nav .nav-item .nav-link {
+    color: white; 
+    transition: color 0.3s ease; 
+}
+
+
+.navbar:hover .navbar-nav .nav-item .nav-link {
+    color: #fff; 
+}
